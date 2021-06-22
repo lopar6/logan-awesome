@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<div class="content-wrapper">
+    <h1>My Projects</h1>
+    <p class="darker-font">These are some of my favories</p>
+    <div class="project-content-wrapper">
+        <div class="large-img-with-text-1">
+            <a href="https://rodscottlaw.com/">
+                <img src="{% static 'images/rod-website.png' %}" alt="rodscottlaw.com" class="large-img">
+                <div class="project-description">
+                    <h2 class="project-title-link">
+                        Website for Rodney M. Scott, Estate Planning & Elder Law
+                    </h2>
+            </a>
+            <p class="description">
+                This is a website I created for the Rodney M. Scott Law firm.
+                It is uniquely suited to the business, with a database for storing
+                important information.
+            </p>
+            <div class="description-box">
+                <div class="content">
+                    <h4>Technologies:</h4>
+                    <ul>
+                        <li>Python</li>
+                        <li>Django</li>
+                        <li>PostgreSQL</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="large-img-with-text-2">
+        <a href= "https://github.com/nateonguitar/CharPy">
+        <img src="{% static 'images/console-engine.png' %}" alt="console engine" class="large-img">
+        <div class="project-description">
+            <h2 class="project-title-link">
+                Python-based Console Game Engine
+            </h2>
+        </a>
+            <p class="description">
+                This pip package is a game engine made in python that allows developers to easily
+                create real-time console games. It is a collaboration between my
+                mentor and friend Nate Brooks. We also built a fully functional version of Tetris!
+            </p>
+            <a href="https://github.com/nateonguitar/CharPyTetris">
+            <p style="font-size:1.4em;" class="project-title-link">
+                See it in use here!
+            </p>
+            </a>
+            <div class="description-box">
+                <div class="content">
+                    <h4>Technologies:</h4>
+                    <ul>
+                        <li>Python</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="large-img-with-text-1">
+        <a href="https://www.nexusmods.com/stardewvalley/mods/8689">
+            <img src="{% static 'images/stardew.png' %}" alt="stardew" class="large-img">
+            <div class="project-description">
+                <h2 class="project-title-link">
+                    Game Mod to Stardew Valley
+                </h2>
+        </a>
+        <p class="description">
+            This is a mod to Stardew Valley that spawns a Newspaper at the players front
+            door containing relevant, dynamically generated information. It has over 1000 
+            downloads!
+        </p>
+        <div class="description-box">
+            <div class="content">
+                <h4>Technologies:</h4>
+                <ul>
+                    <li>C#</li>
+                    <li>.NET</li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

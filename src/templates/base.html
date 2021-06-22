@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!-- Used to make responsive -->
+<meta name="viewport" content="max-width= 1000px width=device-width, initial-scale=1.0" charset="UTF-8">
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+<!-- TODO find better font -->
+
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <title>Logan Parker</title>
+</head>
+
+<body>
+    <div id="parallax">
+        <div class="header-wrapper">
+            <div class="header">
+                <a class='logo' id='logo' href="{% url 'me' %}">
+                    <h1>Logan Parker</h1>
+                </a>
+
+                <div class="nav">
+                    <a class="nav-button" href="{% url 'me' %}">
+                        <div class="darker-font nav-button-label">
+                            <p>
+                                Me
+                            </p>
+                        </div>
+                    </a>
+                    <a class="nav-button" href="{% url 'about' %}">
+                        <div class="darker-font nav-button-label">
+                            <p>
+                                About
+                            </p>
+                        </div>
+                    </a>
+                    <a class="nav-button" href="{% url 'projects' %}">
+                        <div class="darker-font nav-button-label">
+                            <p>
+                                Projects
+                            </p>
+                        </div>
+                    </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        {% block content %}
+        {% endblock %}
+
+        <div class="footer">
+        </div>
+    </div>
+<script src="{% static 'script.js' %}"></script>
+</body>

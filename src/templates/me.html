@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %} 
+
+<div class="content-wrapper">
+    <div class="me-content-wrapper">
+        <div class="image-contact">
+            <figure class="photo-overlap">
+                <img class="headshot" src="{% static 'images/headshot.png' %}" alt="me">
+            </figure>
+            <div class="contact">
+                <a href="https://www.linkedin.com/in/logan-parker-820890205/">
+                    <img class="linkedin-logo" src="{% static 'images/linkedIn.png' %}" alt="linkedin">
+                </a>
+                <p class="darker-font" style=" margin-left:30px">
+                    615-686-9104
+                    <br>
+                    lopar6@gmail.com
+                </p>
+            </div>
+        </div>
+        <div class="me-description">
+            <div class="intro">
+                <h1 class="hello">Hello</h1>
+                <h1 class="im-logan">I'm Logan.
+                </h1>
+            </div>
+            <p class="darker-font bio">
+                I'm an aspiring software developer who is passionate about
+                creating useful and interesting things.
+            </p>
+        </div>
+    </div>
+{% endblock content %}
+</div>
