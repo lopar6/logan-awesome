@@ -173,10 +173,9 @@ html, body {
         align-items: center;
     }
 
-    .linkedin-logo{
-        height: 40px;
+    .logo-link{
+        height: 45px;
         width: 45px;
-        
     }
 
     .content{
