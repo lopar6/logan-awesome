@@ -1,53 +1,42 @@
-// stores percent values for background layer offsets
-class Offset{
-    constructor(){
-        this.x = 0;
-        this.y = 0;
-    }
-}
+const NUM_BACKGROUND_IMAGES = 5;
+// const RELATIVE_MOVEMENT_LEVELS = [.25, .20, .15, .10, .05];
+const RELATIVE_MOVEMENT_LEVELS = [.15, .10, .08, .06, .05];
 
-
-let offset1 = new Offset();
-let offset2 = new Offset();
-let offset3 = new Offset();
-let offset4 = new Offset();
-let offset5 = new Offset();
-
-let element = null;
+let element;
 
 window.onload = () => {
     element = document.querySelector("#parallax");
-    document.addEventListener("mousemove", horizontalParallax);
-    setTimeout(() => {document.body.className += " loaded";}, 400);
-    setTimeout(() => {document.body.className += " timeMark1";}, 1200);
-    setTimeout(() => {document.body.className += " timeMark2";}, 2200);
+    document.addEventListener("mousemove", parallax);
+
+    // delayed rendering bio on home
+    setTimeout(() => {document.body.className += "loaded";}, 400);
+    setTimeout(() => {document.body.className += " time-mark1";}, 1000);
+    setTimeout(() => {document.body.className += " time-mark2";}, 2000);
 }
 
-horizontalParallax = (event) => {
-    // len from side to mid point on screen
-    let x = window.outerWidth/2;
-    // do not parallax on mobile
-    if(x > 500){
-        let mouseX = event.clientX;
-        // makes movement dynamically scale to zoom amount
-        let pixelRatio = window.devicePixelRatio;
-        let percentOffset = 1;
-        if (pixelRatio < 1) {
-            percentOffset =  (window.devicePixelRatio * .08);
-        }
-        else if (pixelRatio > 1) {
-            percentOffset = .1;
-        }
+parallax = (event) => {
 
-        offset1.x = - (mouseX - x) * .25 * percentOffset;
-        offset2.x = - (mouseX - x) * .20 * percentOffset;
-        offset3.x = - (mouseX - x) * .15 * percentOffset;
-        offset4.x = - (mouseX - x) * .10 * percentOffset;
-        offset5.x = - (mouseX - x) * .05 * percentOffset;
-        applyParallax();
+    // do not parallax on mobile
+    if(window.innerWidth > 680){
+        let backgroundPosition = '';
+        // from center
+        const mouseX = event.clientX - (window.outerWidth / 2); 
+        // movement dynamically scale to zoom amount
+        let pixelRatio = window.devicePixelRatio;
+
+        RELATIVE_MOVEMENT_LEVELS.map((relativeOffset, i) => {
+                // const offset = mouseX * relativeOffset * percentOffset 
+                const offset = mouseX * relativeOffset * pixelRatio
+                i === 0 
+                    // ? backgroundPosition +=  `${offset}px 0px`
+                    ? backgroundPosition +=  `${offset}px 0px`
+                    : backgroundPosition += `, ${offset}px 0px`
+            });
+            
+        applyParallax(backgroundPosition);
     }
 }
 
-applyParallax = () => {
-    element.style.backgroundPosition = `${offset1.x}% ${offset1.y}%, ${offset2.x}% ${offset2.y}%, ${offset3.x}% ${offset3.y}%, ${offset4.x}% ${offset4.y}%, ${offset5.x}% ${offset5.y}%`;
+applyParallax = (backgroundPosition) => {
+    element.style.backgroundPosition = backgroundPosition
 }
