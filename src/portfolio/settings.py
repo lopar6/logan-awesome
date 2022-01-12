@@ -20,9 +20,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 config = configparser.RawConfigParser()
 config.read('settings.ini')
 
-ALLOWED_HOSTS = config.get('DJANGO_ALLOWED_HOSTS', 'DJANGO_ALLOWED_HOSTS')
-SECRET_KEY = config.get('SECRET_KEY', 'SECRET_KEY')
-DEBUG = config.get('DEBUG', 'DEBUG')
+ALLOWED_HOSTS = config.get('DEFAULT', 'DJANGO_ALLOWED_HOSTS')
+SECRET_KEY = config.get('DEFAULT', 'SECRET_KEY')
+DEBUG = config.get('DEFAULT', 'DEBUG')
 
 
 
