@@ -1,7 +1,39 @@
-# this is the source code for loganawesome.com
-A website to showcase my skills and projects
+# Loganawesome.com
 
-Since making this website I have learned more about CSS, HTML, Javascript, and React. 
+A website to showcase Logan's skills and projects!
 
-### Why would you ever build a static website using Django!?
-When I set out to to build this website I did not know how to use any front-end tools. I also wanted to sharpen my Django skills. Additionally, if I ever want to add a database or do some backend style work I will be able to add it in easily. Is Django overkill? Youbetcha.
+Since making this website I have learned more about CSS, HTML, Javascript, and React.
+A future iteration of the site would use react, instead of Django. 
+
+# Setup
+
+Navigate to ./src
+
+> cd src
+
+Create virtual environment (**Always run in virtual environment**)
+
+> python3 -m venv env 
+
+Activate environment
+
+> . env/bin/activate
+
+Install requirements
+
+> pip install -r requirements.txt
+
+Create src/settings.ini & define env variables
+
+running locally? copy/paste to setting.ini
+> [DEFAULT]<br>DJANGO_ALLOWED_HOSTS=*<br>SECRET_KEY=SECRET_KEY<br>DEBUG=1
+
+Create & migrate database migrations
+
+> python manage.py makemigrations
+
+> python manage.py migrate
+
+run 
+
+> python manage.py runserver
