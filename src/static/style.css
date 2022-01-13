@@ -296,8 +296,8 @@ body.loaded.time-mark2 .bio{
 /* About section */
 
 .about-content-wrapper{
-    max-width: 1200px;
-    width: 100%;
+    /* max-width: 1200px; */
+    width: 65%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -315,7 +315,7 @@ body.loaded.time-mark2 .bio{
     flex-direction: row;
     justify-items: center;
     justify-content: space-around;
-    width: 65%;
+    width: 100%;
     text-align: center;
     padding-top: 30px;
     padding-bottom: 50px;
@@ -405,13 +405,13 @@ h4{
 }
 
 @media (max-width:1700px){
-    .header, .me-content-wrapper, .skills-content-wrapper{
+    .header, .me-content-wrapper, .about-content-wrapper{
         width: 80%;
     }
 }
 
 @media (max-width:1200px){
-    .header, .me-content-wrapper, .skills-content-wrapper, .project-content-wrapper {
+    .header, .me-content-wrapper, .about-content-wrapper, .project-content-wrapper {
         width: 90%;
     }
     
