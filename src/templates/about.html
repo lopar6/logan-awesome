@@ -3,69 +3,71 @@
 {% load static %}
 
 <div class="content-wrapper">
-    <div class="about-header">
-        <h1>What sets me apart?</h1>
-        <p class="darker-font">I am <span class="light-font" style="text-decoration: underline; text-decoration-color: #e7e0af;">dedicated</span> 
-            to being an amazing software developer.</p>
-        <p class="darker-font">I learn quickly, communicate well, and do what it takes.</p>
-    </div>
-    <!-- <div class="fade-banner-down">
-    </div> -->
-    <div class="skills-content-wrapper">
-        <div class="skills">
-            <h3>
-                Skills:
-            </h3>
-            <div class="big-skills">
-                <ul>
-                    <li>Python</li>
-                    <li>Javascript</li>
-                    <li>Java</li>
-                    <li>C++</li>
-                    <li>MySQL</li>
-                </ul>
-                <ul>
-                    <li>Django</li>
-                    <li>React</li>
-                    <li>HTML/CSS</li>
-                    <li>RESTful API</li>
-                    <li>Git</li>
-                </ul>
-            </div>
+    <div class="about-content-wrapper">
+        <div class="about-header">
+            <h1>What sets me apart?</h1>
+            <p class="darker-font">I'm natural problem solver and dedicated software developer. I learn quickly, communicate well, and
+                relentlessly pursue quality.</p>
         </div>
-        <div class="education">
-            <h3 style="margin-top: 40px;">
-                Education:
-            </h3>
-            <div class="img-with-text">
-                <img src="{% static 'images/coming-soon.png' %}" alt="coming soon">
-                <div class="text">
-                    <h4>
-                        B.S. Computer Science
-                    </h4>
-                    <p>Southern New Hampshire University</p>
-                    <p>2018 - Present</p>
+        <!-- <div class="fade-banner-down">
+        </div> -->
+        <!-- <div class="dark-box">
+            <h3>Experience:</h3>
+            <h4>Software Engineer | Spore</h4>
+        </div> -->
+        <!-- TODO add work experience -->
+        <div class="skills-content-wrapper dark-box">
+            <div class="skills">
+                <h3>Skills:</h3>
+                <div class="big-skills">
+                    <ul>
+                        <li>Python</li>
+                        <li>Javascript</li>
+                        <li>Java</li>
+                        <li>C++</li>
+                    </ul>
+                    <ul>
+                        <li>Django</li>
+                        <li>React</li>
+                        <li>HTML/CSS</li>
+                        <li>Git</li>
+                    </ul>
                 </div>
             </div>
-            <div class="img-with-text">
-                <img src="{% static 'images/degree.jpg' %}" alt="degree">
-                <div class="text">
-                    <h4>
-                        B.S. Environmental Science
-                    </h4>
-                    <p>Southern New Hampshire University</p>
-                    <p>2018 - 2021</p>
+            <div class="education">
+                <h3 style="margin-top: 40px;">
+                    Education:
+                </h3>
+                <div class="img-with-text">
+                    <img src="{% static 'images/coming-soon.png' %}" alt="coming soon">
+                    <div class="text">
+                        <h4>
+                            B.S. Computer Science
+                        </h4>
+                        <p>Southern New Hampshire University</p>
+                        <p>2018 - Present</p>
+                    </div>
+                </div>
+                <div class="img-with-text">
+                    <img src="{% static 'images/degree.jpg' %}" alt="degree">
+                    <div class="text">
+                        <h4>
+                            B.S. Environmental Science
+                        </h4>
+                        <p>Southern New Hampshire University</p>
+                        <p>2018 - 2021</p>
+                    </div>
                 </div>
             </div>
         </div>
+        <!-- <div class="img-with-text" padding-top="30px">
+            <a href="{% static 'images/resume.pdf' %}" download="Resume">
+                <img src="{% static 'images/resume.jpg' %}" alt="resume" />
+                <p>
+                    Download my resume here
+                </p>
+            </a>
+        </div> -->
+    {% endblock content %}
     </div>
-    <!-- <div class="img-with-text" padding-top="30px">
-        <a href="{% static 'images/resume.pdf' %}" download="Resume">
-            <img src="{% static 'images/resume.jpg' %}" alt="resume" />
-            <p>
-                Download my resume here
-            </p>
-        </a>
-    </div> -->
-{% endblock content %}
 </div>
